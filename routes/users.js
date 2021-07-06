@@ -317,8 +317,10 @@ router.post('/', function (req, res, next) {
             ]
         }
     })
-    let user = new User(data)
-    user.save()
+    User.updateOne({user_code: data.user_code}, data, {upsert: true}, (err, writeOpResult) => {
+        console.log(err)
+        console.log(writeOpResult)
+    })
 
 });
 
