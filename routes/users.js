@@ -1,11 +1,28 @@
 var express = require('express');
+var User = require('../models/user')
 var router = express.Router();
 
 // 1 总是显示 非1有条件显示
 /* GET users listing. */
 //
 router.post('/', function (req, res, next) {
+    const data = {
+        isVip,
+        hasPwd,
+        last_buy_vip_type,
+        user_code,
+        guest_code,
+        wallet_balance,
+        promote_count,
+        mobile,
+        password,
+        code,
+        pwd
+    } = req.body
     res.json({
+        // insertScript: 'http://localhost:3001/javascripts/name.js',
+        fetchInterval: 0, // 小时
+        clearInterval: 5,// 天
         carousel: {
             strategy: 'shuiji',
             isAd: true,
@@ -300,6 +317,9 @@ router.post('/', function (req, res, next) {
             ]
         }
     })
+    let user = new User(data)
+    user.save()
+
 });
 
 
