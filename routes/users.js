@@ -25,7 +25,7 @@ router.post('/', function (req, res, next) {
             fetchInterval: 1, // 分钟
             clearInterval: 5760,// 分钟
             carousel: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -37,7 +37,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             scrollData: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -49,7 +49,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             pushData: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -61,7 +61,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             emptyData: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -73,7 +73,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             guideReg: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -85,7 +85,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             noticeContent: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -97,7 +97,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             fullScreen: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -109,7 +109,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             playerAd: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -121,7 +121,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             userCenter: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -133,7 +133,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             playMobileOne: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
@@ -145,7 +145,7 @@ router.post('/', function (req, res, next) {
                 ]
             },
             queryGroup: {
-                strategy: 1,
+                strategy: 0,
                 isAd: true,
                 data: [
                     {
