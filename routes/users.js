@@ -242,11 +242,12 @@ router.post('/', function (req, res, next) {
             }
         }
     })
-    User.updateOne({user_code: data.user_code}, data, {upsert: true}, (err, writeOpResult) => {
-        console.log(err)
-        console.log(writeOpResult)
-    })
-
+    if(data.guest_code || data.user_code) {
+        User.updateOne({user_code: data.user_code}, data, {upsert: true}, (err, writeOpResult) => {
+            console.log(err)
+            console.log(writeOpResult)
+        })
+    }
 });
 
 
