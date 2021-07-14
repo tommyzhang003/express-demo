@@ -17,7 +17,7 @@ router.post('/', function (req, res, next) {
         mobile,
         password,
         code,
-        pwd
+        pwd,
     } = req.body
     res.json({
         data: {
@@ -132,7 +132,43 @@ router.post('/', function (req, res, next) {
                     }
                 ]
             },
+            userCenterB: {
+                strategy: 0,
+                isAd: true,
+                data: [
+                    {
+                        type: 'normal',
+                        desc: '第三方广告',
+                        cover: 'https://assetscdn2.jable.tv/contents/videos_screenshots/16000/16035/320x180/1.jpg',
+                        link: 'https://jable.tv/videos/hnd-991/'
+                    }
+                ]
+            },
             playMobileOne: {
+                strategy: 0,
+                isAd: true,
+                data: [
+                    {
+                        type: 'normal',
+                        desc: '第三方广告',
+                        cover: 'https://assetscdn2.jable.tv/contents/videos_screenshots/16000/16035/320x180/1.jpg',
+                        link: 'https://jable.tv/videos/hnd-991/'
+                    }
+                ]
+            },
+            shortVideo: {
+                strategy: 0,
+                isAd: true,
+                data: [
+                    {
+                        type: 'normal',
+                        desc: '第三方广告',
+                        cover: 'https://assetscdn2.jable.tv/contents/videos_screenshots/16000/16035/320x180/1.jpg',
+                        link: 'https://jable.tv/videos/hnd-991/'
+                    }
+                ]
+            },
+            downloadGuide: {
                 strategy: 0,
                 isAd: true,
                 data: [
@@ -242,8 +278,8 @@ router.post('/', function (req, res, next) {
             }
         }
     })
-    if(data.guest_code || data.user_code) {
-        User.updateOne({user_code: data.user_code}, data, {upsert: true}, (err, writeOpResult) => {
+    if(data.user_code || data.guest_code) {
+        User.updateOne({user_code: data.user_code}, {...data, create_time: new Date()}, {upsert: true}, (err, writeOpResult) => {
             console.log(err)
             console.log(writeOpResult)
         })

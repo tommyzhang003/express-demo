@@ -11,7 +11,9 @@ const schema = mongoose.Schema({
     mobile: String,
     password: String,
     code: String,
-    pwd: String,
+    pwd: String
+}, {
+    timestamps: { createdAt: 'created_at' }
 })
 
 schema.index({ user_code: 1});
