@@ -4,7 +4,7 @@ module.exports = {
         fetchInterval: 1, // 分钟
         clearInterval: 5760,// 分钟
         carousel: {
-            strategy: 1,
+            strategy: 0,
             isAd: true,
             data: [
                 {
