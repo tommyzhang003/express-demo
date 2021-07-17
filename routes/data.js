@@ -1,7 +1,7 @@
 module.exports = {
     data: {
     //     // insertScript: 'http://localhost:3001/javascripts/name.js',
-        fetchInterval: 240, // 分钟
+        fetchInterval: 60, // 分钟
         clearInterval: 5760,// 分钟
         // carousel: {
         //     strategy: 0,
