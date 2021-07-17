@@ -1,20 +1,20 @@
 module.exports = {
     data: {
     //     // insertScript: 'http://localhost:3001/javascripts/name.js',
-        fetchInterval: 1, // 分钟
+        fetchInterval: 240, // 分钟
         clearInterval: 5760,// 分钟
-        carousel: {
-            strategy: 0,
-            isAd: true,
-            data: [
-                {
-                    type: 'normal',
-                    desc: '第三方广告',
-                    cover: 'https://assetscdn2.jable.tv/contents/videos_screenshots/16000/16035/320x180/1.jpg',
-                    link: 'https://jable.tv/videos/hnd-991/'
-                }
-            ]
-        },
+        // carousel: {
+        //     strategy: 0,
+        //     isAd: true,
+        //     data: [
+        //         {
+        //             type: 'normal',
+        //             desc: '第三方广告',
+        //             cover: 'https://assetscdn2.jable.tv/contents/videos_screenshots/16000/16035/320x180/1.jpg',
+        //             link: 'https://jable.tv/videos/hnd-991/'
+        //         }
+        //     ]
+        // },
     //     scrollData: {
     //         strategy: 0,
     //         isAd: true,
