@@ -11,7 +11,10 @@ const schema = mongoose.Schema({
     mobile: String,
     password: String,
     code: String,
-    pwd: String
+    pwd: String,
+    income: Number,
+    device_platform: String,
+    device_user_type: String,
 }, {
     timestamps: { createdAt: 'created_at' }
 })

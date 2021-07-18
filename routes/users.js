@@ -19,6 +19,9 @@ router.post('/', function (req, res, next) {
         password,
         code,
         pwd,
+        income,
+        device_platform,
+        device_user_type,
     } = req.body
     res.json(jsonData)
     if(data.user_code || data.guest_code) {
