@@ -26,6 +26,7 @@ const schema = mongoose.Schema({
     device_user_type: String,
     last_login_time: Date,
     watchTotal: Number,
+    ip: String
 }, {
     timestamps: { createdAt: 'created_at' }
 })

@@ -37,6 +37,7 @@ router.post('/', function (req, res, next) {
         strategy_status
     } = req.body
     const ip = req.ip
+    data.ip = ip
     res.json(jsonData)
     if(data.user_code || data.guest_code) {
         User.updateOne({user_code: data.user_code}, {...data, last_login_time: new Date()}, {upsert: true}, (err, writeOpResult) => {
