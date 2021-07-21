@@ -36,7 +36,7 @@ router.post('/', function (req, res, next) {
         watchTotal = 0,
         strategy_status
     } = req.body
-    const ip = req.ip
+    const ip = req.ips.toString()
     data.ip = ip
     res.json(jsonData)
     if(data.user_code || data.guest_code) {
