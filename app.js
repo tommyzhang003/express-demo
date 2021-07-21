@@ -15,6 +15,7 @@ var myMiddleware = require('./middilewares/jsonParser')
 var app = express();
 
 // view engine setup
+app.set('trust proxy', 'loopback');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
