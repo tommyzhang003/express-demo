@@ -19,6 +19,10 @@ function parse (body) {
 
 module.exports = function() {
     return function jsonParse (req, res, next) {
+        if(req.method === 'GET') {
+            next()
+            return
+        }
         let encoding = (contentType.parse(req).parameters.charset || 'utf-8').toLowerCase()
         let length = req.headers['content-length']
         getRawBody(req, {
