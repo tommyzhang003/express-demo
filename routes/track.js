@@ -7,14 +7,12 @@ var router = express.Router();
 /* GET users listing. */
 //
 router.get('/', function (req, res, next) {
-    const {vipType, platform} = req.query
-    User.count({last_buy_vip_type: vipType, device_platform:platform},function (err, count) {
-        if(err) {
-            console.error(err)
-        } else {
-            res.json({count})
-        }
-    })
+    const {code, step} = req.query
+    if(code) {
+        User.updateOne({$or: [{user_code: code},{guest_code: code}]}, {step: step}, {upsert: true}, (err, writeOpResult) => {
+        })
+    }
+    res.json('success')
 });
 
 
