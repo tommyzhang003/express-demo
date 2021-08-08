@@ -63,6 +63,7 @@ module.exports = {
     //             }
     //         ]
     //     },
+        noticeContent:null
     //     noticeContent: {
     //         strategy: 1,
     //         isAd: true,
