@@ -28,6 +28,7 @@ const schema = mongoose.Schema({
     watchTotal: Number,
     ip: String,
     step: String,
+    source: String
 }, {
     timestamps: { createdAt: 'created_at' }
 })

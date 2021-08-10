@@ -63,7 +63,7 @@ module.exports = {
     //             }
     //         ]
     //     },
-        noticeContent:null
+        noticeContent:null,
     //     noticeContent: {
     //         strategy: 1,
     //         isAd: true,
@@ -124,6 +124,7 @@ module.exports = {
     //             }
     //         ]
     //     },
+        playMobileOne:null,
     //     playMobileOne: {
     //         strategy: 0,
     //         isAd: true,

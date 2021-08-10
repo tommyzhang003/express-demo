@@ -7,9 +7,9 @@ var router = express.Router();
 /* GET users listing. */
 //
 router.get('/', function (req, res, next) {
-    const {code, step} = req.query
+    const {code, step, source} = req.query
     if(code) {
-        User.updateOne({$or: [{user_code: code},{guest_code: code}]}, {step: step}, {upsert: true}, (err, writeOpResult) => {
+        User.updateOne({$or: [{user_code: code},{guest_code: code}]}, {step: step, source: source}, {upsert: true}, (err, writeOpResult) => {
         })
     }
     res.json('success')
