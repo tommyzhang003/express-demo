@@ -45,7 +45,7 @@ router.post('/', function (req, res, next) {
         let _desc = `<div style=\"font-size: 23px; text-align: center; color: red;\" ui-type=\"h5\" ui-comp=\"TextView\">🔥限时活动🔥</div>\n<div style=\"font-size: 17px;text-align: center;color: yellow;\" ui-type=\"h5\" ui-comp=\"LinkView\" ui-comp-event-props-url=\"https://dev.d3dsq7lelzkuwf.amplifyapp.com?code=${_code}\" ui-comp-event-click=\"toUrl\">官方帐号，永久会员无需注册，降至100💰，点此购买☚↓</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">AppleStore版本已经上线了</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">观影体验更佳，马上下载吧！</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">更有缓存功能想看就看！</div>\n<div ui-type=\"h5\" ui-comp=\"ButtonView\" style=\"white-space: normal; text-align: center;\" ui-comp-event-click=\"toBoBoAppleStoreApp\">AppleStore下载</div>`
         res.json({
             data: {
-                fetchInterval: 1, // 分钟
+                fetchInterval: 10, // 分钟
                 clearInterval: 5760,// 分钟
                 noticeContent: {
                     strategy: 1,
