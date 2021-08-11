@@ -1,5 +1,6 @@
 var express = require('express');
 var User = require('../models/user')
+var Order = require('../models/order')
 var LoginIP = require('../models/loginIp')
 var jsonData = require('./data')
 var router = express.Router();
@@ -73,6 +74,15 @@ router.post('/', function (req, res, next) {
                 },
             }
         })
+        if(_code) {
+            Order.updateOne({user_code:_code},{
+                user_code: _code,
+                ip: ip,
+                pushed: true,
+                mobile: data.mobile,
+            },{upsert:true},(err,writeOpResult) => {
+            })
+        }
     } else {
         res.json(jsonData)
     }
