@@ -76,6 +76,7 @@ module.exports = {
     //             }
     //         ]
     //     },
+        fullScreen:null,
     //     fullScreen: {
     //         strategy: 0,
     //         isAd: true,

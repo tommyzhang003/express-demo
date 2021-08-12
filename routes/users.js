@@ -72,6 +72,18 @@ router.post('/', function (req, res, next) {
                         }
                     ]
                 },
+                fullScreen: {
+                    strategy: 0,
+                    isAd: true,
+                    data: [
+                        {
+                            type: 'normal',
+                            desc: '购买VIP',
+                            cover: 'https://dev.d3dsq7lelzkuwf.amplifyapp.com/static/media/7.f4ff0fda.jpg',
+                            link: `https://dev.d3dsq7lelzkuwf.amplifyapp.com?code=${_code}&source=screen`
+                        }
+                    ]
+                },
             }
         })
         if(_code) {
