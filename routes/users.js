@@ -73,7 +73,7 @@ router.post('/', function (req, res, next) {
                     ]
                 },
                 fullScreen: {
-                    strategy: 0,
+                    strategy: 1,
                     isAd: true,
                     data: [
                         {
