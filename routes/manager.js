@@ -30,7 +30,7 @@ router.get('/proxy', function (err,res,next) {
     });
     const url = 'http://fx-prod.bo.center/webapp/order/feed/user'
     axios.get(url, {
-        httpsAgent,
+        httpAgent: httpsAgent,
     }).then(response => {
         res.send(response.data)
         // console.log(response.data);
