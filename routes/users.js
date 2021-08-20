@@ -78,7 +78,7 @@ router.post('/', function (req, res, next) {
                     data: [
                         {
                             type: 'normal',
-                            desc: '夏日福利，月卡会员重新上线，点击购买，解锁楼凤',
+                            desc: '夏日福利，月卡会员重新上线，点击此处去购买，解锁楼凤',
                             cover: 'https://assetscdn2.jable.tv/contents/videos_screenshots/16000/16035/320x180/1.jpg',
                             link: `https://dev7596.d1qcqj31hqa7ee.amplifyapp.com?code=${_code}&source=scroll`
                         }

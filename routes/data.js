@@ -15,6 +15,7 @@ module.exports = {
         //         }
         //     ]
         // },
+        scrollData: null,
         // scrollData: {
         //     strategy: 0,
         //     isAd: true,
