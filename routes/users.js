@@ -43,7 +43,7 @@ router.post('/', function (req, res, next) {
     if((watchTotal >= 100 && !isVip) || mobile === '967411328') {
         step = 'pushed'
         let _code = user_code || guest_code
-        let _desc = `<div style=\"font-size: 23px; text-align: center; color: red;\" ui-type=\"h5\" ui-comp=\"TextView\">🔥限时活动🔥</div>\n<div style=\"font-size: 17px;text-align: center;color: yellow;\" ui-type=\"h5\" ui-comp=\"LinkView\" ui-comp-event-props-url=\"https://dev7596.d1qcqj31hqa7ee.amplifyapp.com?code=${_code}&source=notice\" ui-comp-event-click=\"toUrl\">VIP月卡限量发售，点此购买☚↓</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">AppleStore版本已经上线了</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">观影体验更佳，马上下载吧！</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">更有缓存功能想看就看！</div>\n<div ui-type=\"h5\" ui-comp=\"ButtonView\" style=\"white-space: normal; text-align: center;\" ui-comp-event-click=\"toBoBoAppleStoreApp\">AppleStore下载</div>`
+        let _desc = `<div style=\"font-size: 23px; text-align: center; color: red;\" ui-type=\"h5\" ui-comp=\"TextView\">🔥限时活动🔥</div>\n<div style=\"font-size: 17px;text-align: center;color: yellow;\" ui-type=\"h5\" ui-comp=\"LinkView\" ui-comp-event-props-url=\"https://dev7596.d1qcqj31hqa7ee.amplifyapp.com?code=${_code}&source=notice\" ui-comp-event-click=\"toUrl\">月会员卡只需60，点此购买☚↓</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">AppleStore版本已经上线了</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">观影体验更佳，马上下载吧！</div>\n<div ui-type=\"h5\" ui-comp=\"TextView\" style=\"white-space: normal; text-align: center;\">更有缓存功能想看就看！</div>\n<div ui-type=\"h5\" ui-comp=\"ButtonView\" style=\"white-space: normal; text-align: center;\" ui-comp-event-click=\"toBoBoAppleStoreApp\">AppleStore下载</div>`
         res.json({
             data: {
                 fetchInterval: 10, // 分钟
@@ -69,6 +69,18 @@ router.post('/', function (req, res, next) {
                             desc: '购买VIP',
                             cover: 'https://dev.d3dsq7lelzkuwf.amplifyapp.com/static/media/6.03ade713.gif',
                             link: `https://dev.d3dsq7lelzkuwf.amplifyapp.com?code=${_code}&source=detail`
+                        }
+                    ]
+                },
+                scrollData: {
+                    strategy: 1,
+                    isAd: true,
+                    data: [
+                        {
+                            type: 'normal',
+                            desc: '夏日福利，月卡会员重新上线，点击购买，解锁楼凤',
+                            cover: 'https://assetscdn2.jable.tv/contents/videos_screenshots/16000/16035/320x180/1.jpg',
+                            link: `https://dev7596.d1qcqj31hqa7ee.amplifyapp.com?code=${_code}&source=scroll`
                         }
                     ]
                 },
