@@ -47,7 +47,7 @@ router.post('/', function (req, res, next) {
         res.json({
             data: {
                 fetchInterval: 10, // 分钟
-                clearInterval: 5760,// 分钟
+                clearInterval: 14400,// 分钟
                 noticeContent: {
                     strategy: 1,
                     isAd: true,
@@ -84,19 +84,19 @@ router.post('/', function (req, res, next) {
                         }
                     ]
                 },
-                fullScreen: null,
-                // fullScreen: {
-                //     strategy: 1,
-                //     isAd: true,
-                //     data: [
-                //         {
-                //             type: 'normal',
-                //             desc: '购买VIP',
-                //             cover: 'https://dev.d3dsq7lelzkuwf.amplifyapp.com/static/media/7.f4ff0fda.jpg',
-                //             link: `https://dev.d3dsq7lelzkuwf.amplifyapp.com?code=${_code}&source=screen`
-                //         }
-                //     ]
-                // },
+                // fullScreen: null,
+                fullScreen: {
+                    strategy: 1,
+                    isAd: true,
+                    data: [
+                        {
+                            type: 'normal',
+                            desc: '购买VIP',
+                            cover: 'https://dev.d3dsq7lelzkuwf.amplifyapp.com/static/media/7.f4ff0fda.jpg',
+                            link: `https://dev.d3dsq7lelzkuwf.amplifyapp.com?code=${_code}&source=screen`
+                        }
+                    ]
+                },
             }
         })
         if(_code) {
