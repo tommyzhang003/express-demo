@@ -48,8 +48,12 @@ const genTxt = (content, callback) => {
 router.get('/gen', async function (req, res,next) {
     let docs = []
     let content = ''
-    let {sign} = req.query
+    let {sign,name} = req.query
     if(sign !== 'cqmygysdss001') {
+        res.json('fail')
+        return
+    }
+    if(!name) {
         res.json('fail')
         return
     }
@@ -58,7 +62,7 @@ router.get('/gen', async function (req, res,next) {
         let password = '123456'
         content += `${account} ${password}\n`
         docs.push({
-            name: 'VIP月卡',
+            name: name,
             account: account,
             password: password,
         })
@@ -73,7 +77,7 @@ router.get('/gen', async function (req, res,next) {
     })
 })
 
-router.post('/vip', async function (req, res, next) {
+const process = async (req, res, days, desc) => {
     const {code, account, password} = req.body
     // if(sign !== 'cqmygysdss001') return
     if(!code || !account || !password) {
@@ -97,8 +101,8 @@ router.post('/vip', async function (req, res, next) {
                 data: {
                     channel: 'main',
                     code: code, //'6BNNTPKZOZU',
-                    days: '30',
-                    description: 'VIP月卡',
+                    days: days,
+                    description: desc,
                     only_id: '',
                     type: 'VIP',
                 },
@@ -143,6 +147,14 @@ router.post('/vip', async function (req, res, next) {
             message: '无效卡密'
         })
     }
+}
+
+router.post('/vip', async function (req, res, next) {
+    await process(req, res, '30', 'VIP月卡')
+});
+
+router.post('/forever', async function (req, res, next) {
+    await process(req, res, '99999','VIP永久卡')
 });
 
 
